@@ -1,9 +1,5 @@
 -- Crear base de datos
 CREATE DATABASE gestor_citas;
-
--- Conectarse a la nueva base de datos
-\c gestor_citas;
-
 -- Crear tabla de usuarios
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
@@ -26,11 +22,8 @@ CREATE TABLE appointments (
 );
 
 -- Insertar usuarios de prueba
--- (Contraseñas encriptadas con bcrypt)
+
 
 INSERT INTO users (name, email, password, role) VALUES
-('Cliente Demo', 'cliente@example.com', '$2b$10$nOUIs5kJ7naTuTFkBy1veuEvaf1uE/7dZq5pIUKUV4SkV2YPmv7ty', 'cliente'),
-('Medico Demo', 'medico@example.com', '$2b$10$nOUIs5kJ7naTuTFkBy1veuEvaf1uE/7dZq5pIUKUV4SkV2YPmv7ty', 'medico');
-
--- NOTA:
--- La contraseña en texto plano de ambos es: 123456
+('Cliente Demo', 'cliente@example.com', '123456', 'cliente'),
+('Medico Demo', 'medico@example.com', '123456', 'medico');
